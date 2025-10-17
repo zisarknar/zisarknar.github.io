@@ -8,7 +8,6 @@ const Page = () =>
         <section className="flex my-8 w-full justify-between items-start">
             <div className="w-1/2">
                 <SectionTitle title="About Me" />
-
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, provident ex? Officia nostrum provident laudantium, dolore aut ducimus cumque accusantium, doloribus quo rem perspiciatis quibusdam quod nulla veritatis. Voluptatum, illo.
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, provident ex? Officia nostrum provident laudantium, dolore aut ducimus cumque accusantium, doloribus quo rem perspiciatis quibusdam quod nulla veritatis. Voluptatum, illo.
