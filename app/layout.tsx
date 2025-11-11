@@ -1,16 +1,23 @@
 import type { Metadata } from 'next'
-import { Roboto } from 'next/font/google'
+import { Inter, Fira_Code } from 'next/font/google'
 import './globals.css'
+import { LanguageProvider } from './lib/LanguageContext'
 
-const roboto = Roboto({
-  weight: ['100', '300', '400', '500', '700', '900'],
+const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
+  variable: '--font-inter',
+})
+
+const firaCode = Fira_Code({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-fira-code',
 })
 
 export const metadata: Metadata = {
-  title: '<ZISARKNAR.DEV/>',
-  description: 'Personal portfolio web page',
+  title: 'ZISARKNAR.DEV - Software Engineer',
+  description: 'Futuristic portfolio - Software Engineer in Tokyo specializing in Web Apps, APIs, and Mobile Development',
 }
 
 export default function RootLayout({
@@ -19,9 +26,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={roboto.className}>
-        {children}
+    <html lang="en" className={`${inter.variable} ${firaCode.variable}`}>
+      <body className={inter.className}>
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   )
