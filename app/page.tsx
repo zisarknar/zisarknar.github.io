@@ -20,44 +20,21 @@ interface Project {
 
 interface Skill {
   name: string
-  icon: string
+  logo: string
   level: number
+  category: string
 }
 
-const projects: Project[] = [
-  {
-    title: "Cloud Infrastructure Platform",
-    description: "Scalable microservices architecture deployed on Kubernetes with CI/CD automation",
-    tech: ["Docker", "K8s", "Terraform", "AWS"],
-    icon: "☁️"
-  },
-  {
-    title: "Real-time Analytics Dashboard",
-    description: "High-performance data visualization platform processing millions of events per second",
-    tech: ["React", "WebSocket", "Redis", "PostgreSQL"],
-    icon: "📊"
-  },
-  {
-    title: "API Gateway Service",
-    description: "Enterprise-grade REST API with authentication, rate limiting, and comprehensive monitoring",
-    tech: ["Node.js", "Express", "JWT", "Prometheus"],
-    icon: "🔌"
-  },
-  {
-    title: "Mobile Banking App",
-    description: "Cross-platform mobile application with biometric authentication and end-to-end encryption",
-    tech: ["React Native", "TypeScript", "Firebase"],
-    icon: "📱"
-  }
-]
-
 const skills: Skill[] = [
-  { name: "TypeScript", icon: "⚡", level: 95 },
-  { name: "React/Next.js", icon: "⚛️", level: 90 },
-  { name: "Node.js", icon: "🟢", level: 88 },
-  { name: "Docker/K8s", icon: "🐋", level: 85 },
-  { name: "PostgreSQL", icon: "🗄️", level: 82 },
-  { name: "AWS/Azure", icon: "☁️", level: 80 }
+  { name: "Java", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg", level: 95, category: "Languages" },
+  { name: "Spring Boot", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg", level: 95, category: "Backend" },
+  { name: "TypeScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg", level: 93, category: "Languages" },
+  { name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", level: 93, category: "Frontend" },
+  { name: "React Native", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", level: 93, category: "Mobile" },
+  { name: "Flutter", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg", level: 88, category: "Mobile" },
+  { name: "PostgreSQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg", level: 90, category: "Database" },
+  { name: "Docker", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg", level: 88, category: "DevOps" },
+  { name: "AWS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg", level: 85, category: "DevOps" }
 ]
 
 export default function Home() {
@@ -217,9 +194,10 @@ export default function Home() {
                   <h3 className="text-xl font-mono text-cyan-400">&gt; BACKGROUND_</h3>
                 </div>
                 <p className="text-gray-300 leading-relaxed">
-                  Software engineer specializing in building scalable web applications and APIs. 
-                  Passionate about clean code, system architecture, and creating performant solutions 
-                  that solve real-world problems.
+                  Software engineer with 7+ years of experience in full-stack development. 
+                  Specialized in building enterprise applications, mobile solutions, and API services 
+                  using Java (Spring Boot), Python (Django), JavaScript/TypeScript (React, React Native), and Cloud technologies.
+                  Based in Tokyo, Japan since April 2022.
                 </p>
                 
                 {/* Decorative line */}
@@ -240,11 +218,12 @@ export default function Home() {
               <div className="relative p-8 z-10">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-1 h-8 bg-gradient-to-b from-purple-400 to-pink-500"></div>
-                  <h3 className="text-xl font-mono text-purple-400">&gt; INTERESTS_</h3>
+                  <h3 className="text-xl font-mono text-purple-400">&gt; EXPERTISE_</h3>
                 </div>
                 <p className="text-gray-300 leading-relaxed">
-                  Cloud-native architecture, DevOps automation, open-source contributions, 
-                  and exploring cutting-edge technologies. Always learning, always building.
+                  System architecture design, RESTful APIs, cross-platform mobile development (React Native, Flutter), 
+                  secure authentication (Keycloak, OAuth2), IoT integration, and CI/CD automation. 
+                  Led multiple enterprise projects from conception to deployment.
                 </p>
                 
                 {/* Decorative line */}
@@ -285,31 +264,21 @@ export default function Home() {
                 <div className="relative p-6 z-10">
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-3">
-                      <div className="text-2xl filter group-hover:drop-shadow-[0_0_8px_rgba(6,182,212,0.8)] transition-all">
-                        {skill.icon}
+                      <div className="w-10 h-10 flex items-center justify-center filter group-hover:drop-shadow-[0_0_8px_rgba(6,182,212,0.8)] transition-all">
+                        <img 
+                          src={skill.logo} 
+                          alt={skill.name}
+                          className="w-8 h-8 object-contain"
+                        />
                       </div>
-                      <span className="text-lg font-mono text-cyan-400 group-hover:text-cyan-300 transition-colors">
-                        {skill.name}
-                      </span>
-                    </div>
-                  </div>
-                  
-                  {/* Progress bar container */}
-                  <div className="relative">
-                    <div className="w-full h-2 bg-gray-900/50 border border-cyan-500/20 overflow-hidden">
-                      <div
-                        className="h-full bg-gradient-to-r from-cyan-500 to-blue-500 relative overflow-hidden transition-all duration-1000"
-                        style={{ width: `${skill.level}%` }}
-                      >
-                        {/* Animated shine effect */}
-                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-pulse"></div>
+                      <div>
+                        <span className="text-lg font-mono text-cyan-400 group-hover:text-cyan-300 transition-colors block">
+                          {skill.name}
+                        </span>
+                        <span className="text-xs text-gray-600 font-mono">
+                          {skill.category}
+                        </span>
                       </div>
-                    </div>
-                    
-                    {/* Percentage display */}
-                    <div className="flex justify-between items-center mt-2">
-                      <span className="text-xs text-gray-600 font-mono">PROFICIENCY</span>
-                      <span className="text-xs text-cyan-400 font-mono">{skill.level}%</span>
                     </div>
                   </div>
                 </div>
@@ -322,90 +291,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Projects Section */}
-      <section id="projects" className="relative py-32 px-4">
-        <div className="max-w-6xl mx-auto">
-          {/* Section Header */}
-          <div className="flex items-center gap-4 mb-16">
-            <div className="w-12 h-px bg-gradient-to-r from-transparent to-blue-500"></div>
-            <h2 className="text-3xl md:text-5xl font-bold">
-              <span className="bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent">
-                {t.sections.projects}
-              </span>
-            </h2>
-            <div className="flex-1 h-px bg-gradient-to-r from-blue-500 to-transparent"></div>
-            <span className="font-mono text-xs text-blue-500">011</span>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            {projects.map((project, index) => (
-              <div
-                key={index}
-                className="group relative bg-gradient-to-br from-gray-900/40 to-black/40 backdrop-blur-sm border border-purple-500/20 hover:border-purple-400 transition-all duration-500 overflow-hidden"
-              >
-                {/* Glowing corner accents */}
-                <div className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-purple-400 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-purple-400 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                <div className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-purple-400 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                <div className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-purple-400 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                
-                {/* Hover glow effect */}
-                <div className="absolute inset-0 bg-purple-500/0 group-hover:bg-purple-500/5 transition-all duration-500"></div>
-                
-                <div className="relative p-8 z-10">
-                  <div className="flex items-start justify-between mb-6">
-                    <div className="text-4xl filter group-hover:drop-shadow-[0_0_12px_rgba(168,85,247,0.8)] transition-all">
-                      {project.icon}
-                    </div>
-                    <div className="flex items-center gap-2 font-mono text-xs">
-                      <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                      <span className="text-green-400">{'// '}{String(index + 1).padStart(2, '0')}</span>
-                    </div>
-                  </div>
-                  
-                  <h3 className="text-xl font-bold text-cyan-400 mb-4 group-hover:text-cyan-300 transition-colors">
-                    {project.title}
-                  </h3>
-                  
-                  <p className="text-gray-400 mb-6 leading-relaxed text-sm">
-                    {project.description}
-                  </p>
-                  
-                  {/* Tech tags */}
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tech.map((tech, techIndex) => (
-                      <span
-                        key={techIndex}
-                        className="px-3 py-1 text-xs font-mono bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/20 hover:border-cyan-400 transition-all"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-
-                  {/* Bottom accent line */}
-                  <div className="h-px w-0 group-hover:w-full bg-gradient-to-r from-purple-500 to-cyan-500 transition-all duration-500"></div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* View All Projects Button */}
-          <div className="flex justify-center mt-12">
-            <Link
-              href="/projects"
-              className="group relative px-8 py-4 font-mono text-cyan-400 overflow-hidden transition-all duration-300"
-            >
-              <div className="absolute inset-0 bg-cyan-500/10 backdrop-blur-sm border-2 border-cyan-500 group-hover:bg-cyan-500/20 transition-all duration-300"></div>
-              <span className="relative z-10 flex items-center gap-2">
-                <span>VIEW ALL PROJECTS</span>
-                <span className="group-hover:translate-x-1 transition-transform">→</span>
-              </span>
-              <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 group-hover:w-full transition-all duration-300"></div>
-            </Link>
-          </div>
-        </div>
-      </section>
+      {/* Projects Section - Temporarily Hidden */}
 
       {/* Contact Section */}
       <section id="contact" className="relative py-32 px-4">
@@ -442,7 +328,7 @@ export default function Home() {
               
               <div className="flex flex-wrap gap-6 justify-center">
                 <a
-                  href="mailto:contact@zisarknar.dev"
+                  href="mailto:zisarknar.me@gmail.com"
                   className="group relative px-8 py-4 bg-cyan-500/10 border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500/20 transition-all duration-300 overflow-hidden"
                 >
                   <div className="absolute inset-0 bg-cyan-500/0 group-hover:bg-cyan-500/10 transition-all"></div>
@@ -470,7 +356,7 @@ export default function Home() {
                 </a>
                 
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/zisarknar/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative px-8 py-4 bg-blue-500/10 border-2 border-blue-500 text-blue-400 hover:bg-blue-500/20 transition-all duration-300 overflow-hidden"

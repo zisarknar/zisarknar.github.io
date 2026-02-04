@@ -46,29 +46,29 @@ const Navbar = () => {
 
           {/* Navigation Links */}
           <div className="flex items-center gap-1 md:gap-2">
-            <Link
+            {/* Temporarily hidden - Projects */}
+            {/* <Link
               href="/projects"
               className="group relative px-4 md:px-6 py-2 font-mono text-sm text-cyan-400 hover:text-cyan-300 transition-all duration-300"
             >
               <span className="relative z-10">{t.nav.projects}</span>
               <div className="absolute inset-0 border border-cyan-500/0 group-hover:border-cyan-500/50 transition-all duration-300"></div>
               <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 group-hover:w-full transition-all duration-300"></div>
-              {/* Corner dots */}
               <div className="absolute top-0 left-0 w-1 h-1 bg-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity"></div>
               <div className="absolute top-0 right-0 w-1 h-1 bg-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-            </Link>
+            </Link> */}
 
-            <Link
+            {/* Temporarily hidden - Blogs */}
+            {/* <Link
               href="/blogs"
               className="group relative px-4 md:px-6 py-2 font-mono text-sm text-purple-400 hover:text-purple-300 transition-all duration-300"
             >
               <span className="relative z-10">{t.nav.blogs}</span>
               <div className="absolute inset-0 border border-purple-500/0 group-hover:border-purple-500/50 transition-all duration-300"></div>
               <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-400 group-hover:w-full transition-all duration-300"></div>
-              {/* Corner dots */}
               <div className="absolute top-0 left-0 w-1 h-1 bg-purple-400 opacity-0 group-hover:opacity-100 transition-opacity"></div>
               <div className="absolute top-0 right-0 w-1 h-1 bg-purple-400 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-            </Link>
+            </Link> */}
 
             <Link
               href="/about"
