@@ -1,146 +1,105 @@
-'use client'
-
 import Link from 'next/link'
-import ParticleBackground from './components/ParticleBackground'
-import Navbar from './components/Navbar'
-import { useEffect, useState } from 'react'
 
 export default function NotFound() {
-  const [glitchText, setGlitchText] = useState('404')
-  const glitchChars = '!<>-_\\/[]{}—=+*^?#________'
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const shouldGlitch = Math.random() > 0.85
-      if (shouldGlitch) {
-        const chars = glitchText.split('')
-        const randomIndex = Math.floor(Math.random() * chars.length)
-        chars[randomIndex] = glitchChars[Math.floor(Math.random() * glitchChars.length)]
-        setGlitchText(chars.join(''))
-        setTimeout(() => setGlitchText('404'), 100)
-      }
-    }, 150)
-
-    return () => clearInterval(interval)
-  }, [glitchText])
-
   return (
-    <main className="min-h-screen w-full bg-black text-white overflow-x-hidden">
-      <ParticleBackground />
-      <Navbar />
-      
-      <section className="relative min-h-screen flex flex-col items-center justify-center px-4 pt-20">
-        {/* Tron-style geometric overlay */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-0 left-1/2 w-px h-full bg-gradient-to-b from-transparent via-cyan-500 to-transparent"></div>
-          <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500 to-transparent"></div>
-          <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-500/50 to-transparent"></div>
-          <div className="absolute top-3/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent"></div>
-        </div>
+    <main className="min-h-screen w-full bg-white text-gray-900">
+      {/* Fixed Social Links - Right Side */}
+      <div className="fixed right-8 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-6">
+        <a 
+          href="https://github.com/zisarknar" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="group p-2"
+          aria-label="GitHub"
+        >
+          <svg className="w-5 h-5 text-gray-400 group-hover:text-gray-900 transition-colors" fill="currentColor" viewBox="0 0 24 24">
+            <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd" />
+          </svg>
+        </a>
+        <a 
+          href="https://twitter.com/zisarknar" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="group p-2"
+          aria-label="Twitter"
+        >
+          <svg className="w-5 h-5 text-gray-400 group-hover:text-gray-900 transition-colors" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+        </a>
+        <a 
+          href="https://linkedin.com/in/zisarknar" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="group p-2"
+          aria-label="LinkedIn"
+        >
+          <svg className="w-5 h-5 text-gray-400 group-hover:text-gray-900 transition-colors" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+        </a>
+      </div>
 
-        {/* Glowing orbs */}
-        <div className="absolute top-20 left-10 w-32 h-32 bg-red-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-40 right-20 w-40 h-40 bg-purple-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-
-        <div className="relative z-10 max-w-4xl mx-auto text-center space-y-8">
-          {/* Error status bar */}
-          <div className="inline-flex items-center gap-3 px-6 py-3 bg-gray-900/40 backdrop-blur-md border border-red-500/30 rounded-full mb-6 shadow-[0_0_30px_rgba(239,68,68,0.3)]">
-            <div className="w-2 h-2 bg-red-400 rounded-full animate-pulse"></div>
-            <span className="text-xs font-mono text-gray-400 tracking-wider">ERROR_DETECTED</span>
-            <div className="w-px h-4 bg-red-500/30"></div>
-            <span className="text-xs font-mono text-red-400">PAGE_NOT_FOUND</span>
+      {/* 404 Content */}
+      <section className="relative min-h-screen flex items-center px-6 md:px-12 lg:px-24">
+        <div className="max-w-7xl mx-auto w-full text-center">
+          <div className="max-w-2xl mx-auto space-y-8">
+          {/* Large 404 */}
+          <div className="text-9xl font-bold mb-8 text-gray-900">
+            404
           </div>
           
-          {/* Giant 404 with glitch effect */}
-          <div className="relative mb-8">
-            <h1 className="text-[12rem] md:text-[16rem] font-bold leading-none tracking-tight">
-              <span className="relative inline-block">
-                <span className="absolute inset-0 blur-3xl bg-gradient-to-r from-red-500 via-purple-500 to-cyan-500 opacity-50"></span>
-                <span className="relative bg-gradient-to-r from-red-400 via-purple-500 to-cyan-500 bg-clip-text text-transparent glitch-text" data-text={glitchText}>
-                  {glitchText}
-                </span>
-              </span>
-            </h1>
-            
-            {/* Hexagonal accent lines */}
-            <div className="absolute -left-20 top-1/2 w-16 h-px bg-gradient-to-r from-transparent to-red-500"></div>
-            <div className="absolute -right-20 top-1/2 w-16 h-px bg-gradient-to-l from-transparent to-cyan-500"></div>
-          </div>
-
-          {/* Error message */}
-          <div className="relative inline-block mb-8">
-            <div className="text-2xl md:text-3xl font-light tracking-[0.3em] text-cyan-300 mb-2">
-              PAGE NOT FOUND
-            </div>
-            <div className="absolute inset-0 text-2xl md:text-3xl font-light tracking-[0.3em] text-red-500 opacity-30 blur-sm" style={{ transform: 'translate(2px, 2px)' }}>
-              PAGE NOT FOUND
-            </div>
-          </div>
+          {/* Heading */}
+          <h1 className="text-5xl md:text-6xl font-bold tracking-tight mb-6">
+            PAGE NOT<br/>FOUND
+          </h1>
+          <div className="w-20 h-1 bg-gray-900 mx-auto mb-8"></div>
           
           {/* Description */}
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-12">
-            The page you&apos;re looking for has been moved, deleted, or never existed in this dimension.
-            Let&apos;s get you back to safety.
+          <p className="text-lg text-gray-600 mb-8">
+            The page you&apos;re looking for doesn&apos;t exist or has been moved.
           </p>
 
-          {/* Terminal-style error info */}
-          <div className="relative max-w-2xl mx-auto bg-black/60 backdrop-blur-sm border border-red-500/30 p-6 mb-12">
-            <div className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-red-400"></div>
-            <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-red-400"></div>
-            <div className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-red-400"></div>
-            <div className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-red-400"></div>
-            
-            <div className="font-mono text-left text-sm space-y-2">
-              <div className="flex items-center gap-2">
-                <span className="text-red-400">{'>'}</span>
-                <span className="text-gray-500">ERROR_CODE:</span>
-                <span className="text-red-400">404</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-red-400">{'>'}</span>
-                <span className="text-gray-500">STATUS:</span>
-                <span className="text-yellow-400">RESOURCE_NOT_FOUND</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-red-400">{'>'}</span>
-                <span className="text-gray-500">SUGGESTION:</span>
-                <span className="text-cyan-400">RETURN_HOME()</span>
-              </div>
-            </div>
-          </div>
-          
-          {/* Action buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+          {/* Action Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/"
-              className="group relative px-8 py-4 font-mono text-cyan-400 overflow-hidden transition-all duration-300"
+              className="px-8 py-4 bg-gray-900 text-white hover:bg-gray-800 transition-colors text-sm font-medium tracking-wider"
             >
-              <div className="absolute inset-0 bg-cyan-500/10 backdrop-blur-sm border-2 border-cyan-500 group-hover:bg-cyan-500/20 transition-all duration-300"></div>
-              <span className="relative z-10 flex items-center gap-2">
-                <span>← GO HOME</span>
-              </span>
-              <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 group-hover:w-full transition-all duration-300"></div>
+              GO HOME
             </Link>
-
             <Link
-              href="/projects"
-              className="group relative px-8 py-4 font-mono text-purple-400 overflow-hidden transition-all duration-300"
+              href="/about"
+              className="px-8 py-4 border border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white transition-all text-sm font-medium tracking-wider"
             >
-              <div className="absolute inset-0 bg-purple-500/10 backdrop-blur-sm border-2 border-purple-500 group-hover:bg-purple-500/20 transition-all duration-300"></div>
-              <span className="relative z-10 flex items-center gap-2">
-                <span>VIEW PROJECTS</span>
-              </span>
-              <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-400 group-hover:w-full transition-all duration-300"></div>
+              ABOUT ME
             </Link>
+          </div>
           </div>
         </div>
 
-        {/* Corner accents */}
-        <div className="absolute top-0 left-0 w-32 h-32 border-t-2 border-l-2 border-red-500/30"></div>
-        <div className="absolute top-0 right-0 w-32 h-32 border-t-2 border-r-2 border-purple-500/30"></div>
-        <div className="absolute bottom-0 left-0 w-32 h-32 border-b-2 border-l-2 border-cyan-500/30"></div>
-        <div className="absolute bottom-0 right-0 w-32 h-32 border-b-2 border-r-2 border-red-500/30"></div>
+        {/* Bottom Links */}
+        <div className="absolute bottom-8 left-0 right-0 px-6 md:px-12 lg:px-24">
+          <div className="max-w-7xl mx-auto flex justify-center gap-12 text-xs text-gray-500">
+            <Link href="/" className="hover:text-gray-900 transition-colors tracking-wider">HOME</Link>
+            <Link href="/about" className="hover:text-gray-900 transition-colors tracking-wider">ABOUT</Link>
+          </div>
+        </div>
       </section>
+
+      {/* Footer */}
+      <footer className="relative py-8 px-6 md:px-12 lg:px-24 border-t border-gray-100">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-sm text-gray-500">
+            © 2026 ZISARKNAR
+          </p>
+          <div className="flex gap-6 text-sm text-gray-500">
+            <a href="https://github.com/zisarknar" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900 transition-colors">GitHub</a>
+            <a href="https://linkedin.com/in/zisarknar" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900 transition-colors">LinkedIn</a>
+            <a href="https://twitter.com/zisarknar" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900 transition-colors">Twitter</a>
+          </div>
+        </div>
+      </footer>
     </main>
   )
 }
