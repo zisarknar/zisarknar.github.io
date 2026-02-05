@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter, Fira_Code } from 'next/font/google'
 import './globals.css'
 import { LanguageProvider } from './lib/LanguageContext'
+import FirebaseAnalytics from './components/FirebaseAnalytics'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -35,6 +36,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <LanguageProvider>
+          <FirebaseAnalytics />
           {children}
         </LanguageProvider>
       </body>
