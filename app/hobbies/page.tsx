@@ -125,8 +125,8 @@ export default function Hobbies() {
                 />
               </div>
               <div>
-                <h3 className="font-bold text-lg">Alpine Dawn</h3>
-                <p className="text-sm text-gray-600">Northern Alps at 5:30 AM. The early wake-up call was worth every second for this view.</p>
+                <h3 className="font-bold text-lg">View from Mt. Daibosatsu</h3>
+                <p className="text-sm text-gray-600">Early morning hike capturing the breathtaking view of Mt. Fuji. One of my most memorable trails.</p>
               </div>
             </div>
 
@@ -139,10 +139,10 @@ export default function Hobbies() {
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
                 />
               </div>
-              <div>
-                <h3 className="font-bold text-lg">Forest Path</h3>
-                <p className="text-sm text-gray-600">Peaceful cedar forest trails near Nikko. The filtered sunlight creates a magical atmosphere.</p>
-              </div>
+                <div>
+                <h3 className="font-bold text-lg">Group photo at the top of Mt. Jimba</h3>
+                <p className="text-sm text-gray-600">A memorable group hike with friends, celebrating together at the summit of Mt. Jimba with stunning views of the surrounding peaks.</p>
+                </div>
             </div>
 
             {/* Image 3 */}
@@ -154,10 +154,10 @@ export default function Hobbies() {
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
                 />
               </div>
-              <div>
-                <h3 className="font-bold text-lg">Summit Victory</h3>
-                <p className="text-sm text-gray-600">Standing at 3,190m on Mount Hotaka. The sense of accomplishment is indescribable.</p>
-              </div>
+                <div>
+                <h3 className="font-bold text-lg">At the top of Mt. Tanzawa</h3>
+                <p className="text-sm text-gray-600">Standing at the summit of Mt. Tanzawa, one of the most accessible yet rewarding peaks near Tokyo, offering panoramic views of the Kanto region.</p>
+                </div>
             </div>
           </div>
         </div>
