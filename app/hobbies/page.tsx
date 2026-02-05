@@ -70,8 +70,8 @@ export default function Hobbies() {
               <div className="space-y-6 text-base text-gray-700 leading-relaxed">
                 <p>
                   Living in Japan has given me incredible access to some of the most beautiful mountain trails in the world.
-                  Every weekend, I try to escape the city and immerse myself in nature, whether it&apos;s climbing Mount Takao
-                  just outside Tokyo or tackling more challenging peaks in the Japanese Alps.
+                  Every weekend, I try to escape the city and immerse myself in nature, whether it&apos;s climbing peaks
+                  just outside Tokyo or tackling more challenging mountains in the Japanese Alps.
                 </p>
                 <p>
                   Hiking has become more than just a hobby—it&apos;s a form of meditation. The rhythm of walking,
@@ -80,27 +80,20 @@ export default function Hobbies() {
                   a challenging climb.
                 </p>
                 <p>
-                  My favorite trails include the Kamikochi Valley in Nagano, Mount Fuji (which I&apos;ve climbed twice),
-                  and the coastal paths of the Izu Peninsula. Each hike offers its own unique challenges and rewards,
-                  teaching me patience, perseverance, and the importance of taking things one step at a time—lessons
-                  that translate surprisingly well to software development.
+                  What I love most about hiking is the simplicity of it. There&apos;s no technology to distract you,
+                  no notifications demanding your attention. Just you, the trail, and the mountain ahead. It&apos;s
+                  in these moments of disconnection that I find clarity and inspiration for my work and life.
                 </p>
-              </div>
-
-              {/* Stats */}
-              <div className="grid grid-cols-3 gap-8 pt-8 border-t border-gray-200">
-                <div>
-                  <div className="text-3xl font-bold text-gray-900">50+</div>
-                  <div className="text-sm text-gray-600 mt-1">Trails Completed</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-gray-900">3,776m</div>
-                  <div className="text-sm text-gray-600 mt-1">Highest Peak</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-gray-900">2x</div>
-                  <div className="text-sm text-gray-600 mt-1">Mt. Fuji Climbs</div>
-                </div>
+                <p>
+                  Each trail offers its own unique challenges and rewards, teaching me patience, perseverance, and the
+                  importance of taking things one step at a time—lessons that translate surprisingly well to software
+                  development. The journey matters as much as the destination.
+                </p>
+                <p>
+                  Over the years, hiking has taught me to appreciate the beauty of gradual progress. Just as you can&apos;t
+                  rush to a summit, you can&apos;t rush to becoming a better engineer. It&apos;s about consistent effort,
+                  learning from each step, and enjoying the process along the way.
+                </p>
               </div>
             </div>
 
@@ -166,6 +159,56 @@ export default function Hobbies() {
                 <p className="text-sm text-gray-600">Standing at 3,190m on Mount Hotaka. The sense of accomplishment is indescribable.</p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Gym Section */}
+      <section className="relative py-24 px-6 md:px-12 lg:px-24">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+            {/* Content */}
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <div className="text-sm text-gray-500 tracking-wider">02 / FITNESS</div>
+                <h2 className="text-5xl md:text-6xl font-bold tracking-tight">GYM</h2>
+                <div className="w-20 h-1 bg-gray-900"></div>
+              </div>
+
+              <div className="space-y-6 text-base text-gray-700 leading-relaxed">
+                <p>
+                  As a software engineer, my lifestyle is predominantly sedentary—hours spent sitting at a desk,
+                  staring at screens, and solving problems with my mind rather than my body. This has led to weight
+                  gain and declining physical health, which is why I need the gym more than ever.
+                </p>
+                <p>
+                  The gym isn&apos;t just about fitness for me—it&apos;s a necessity. It&apos;s where I actively fight
+                  against the negative effects of a desk job. Every session is a commitment to balance out the hours
+                  of sitting, to rebuild strength, and to take control of my health.
+                </p>
+                <p>
+                  Starting this journey wasn&apos;t easy. Being overweight and out of shape meant every workout was
+                  challenging. But the gym has taught me that progress, no matter how small, is still progress. The
+                  discipline of showing up consistently mirrors the same persistence I bring to solving difficult
+                  coding problems.
+                </p>
+              </div>
+            </div>
+
+            {/* Image */}
+            <div className="relative lg:order-first">
+              <div className="aspect-[4/3] bg-gray-200 overflow-hidden">
+                <img
+                  src="/assets/hobbies/gym.png"
+                  alt="Gym training"
+                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+              {/* Decorative elements */}
+              <div className="absolute -bottom-6 -left-6 w-32 h-32 border-b-2 border-l-2 border-gray-200"></div>
+            </div>
+
           </div>
         </div>
       </section>

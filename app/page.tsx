@@ -43,7 +43,7 @@ export default function Home() {
               {/* Bio */}
               <div className="space-y-4 max-w-lg">
                 <p className="text-base text-gray-700 leading-relaxed">
-                  SOFTWARE ENGINEER, I&apos;M SPECIALIZES IN WEBSITE DESIGN, PROTOTYPING, WIRE-FRAMING, AND DESIGN SYSTEMS, TURNING COMPLEX IDEAS INTO CLEAN, FUNCTIONAL INTERFACES DESIGN.
+                  FULL STACK & MOBILE ENGINEER FROM MYANMAR. ORIGINALLY FROM <a href="https://en.wikipedia.org/wiki/Lisu_people" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 transition-colors cursor-pointer inline-flex items-center gap-1">THE LISU PEOPLE<svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg></a>, I SPECIALIZE IN BUILDING SCALABLE WEB APPLICATIONS, MOBILE APPS, AND APIS, TRANSFORMING COMPLEX REQUIREMENTS INTO ROBUST, PRODUCTION-READY SOLUTIONS.
                 </p>
               </div>
 
@@ -73,15 +73,15 @@ export default function Home() {
                 {/* Overlaid Large Name Text */}
                 <div className="absolute inset-0 flex flex-col justify-end">
                   <h3 className="text-9xl font-bold text-white leading-none tracking-tight px-8">
-                    Hello
+                    Bello
                     <br/>
-                    World
+                    Banana
                   </h3>
                 </div>
                 
                 {/* Role Text - Top Right */}
                 <div className="absolute top-8 right-8 text-right">
-                  <p className="text-white text-lg font-light">Trust me this is me.</p>
+                  <p className="text-white text-lg font-light">Trust me, <br/> I am a coder!</p>
                 </div>
               </div>
             </div>
