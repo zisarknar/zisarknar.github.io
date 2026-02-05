@@ -87,45 +87,48 @@ export default function About() {
       </section>
 
       {/* Skills Section */}
-      <section className="relative py-24 px-6 md:px-12 lg:px-24 bg-gray-50">
+      <section className="relative py-16 px-6 md:px-12 lg:px-24 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-16">
+          <div className="mb-8">
             <div className="space-y-2">
               <h2 className="text-5xl font-bold">SKILLS</h2>
               <div className="w-20 h-1 bg-gray-900"></div>
             </div>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-3">
             {[
-              'Java', 
-              'TypeScript', 
-              'JavaScript', 
-              'Python', 
-              'Dart',
-              'SQL',
-              'Spring Boot', 
-              'Django',
-              'React', 
-              'React Native', 
-              'Flutter', 
-              'Tailwind',
-              'AWS', 
-              'Docker', 
-              'GitHub Actions',
-              'Git',
-              'PostgreSQL', 
-              'MySQL',
-              'MongoDB',
-              'Redis',
-              'Firebase',
-              'Figma',
-              'Keycloak',
-              'RESTful API'
+              { name: 'Java', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg' },
+              { name: 'TypeScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg' },
+              { name: 'JavaScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
+              { name: 'Python', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
+              { name: 'Dart', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg' },
+              { name: 'SQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
+              { name: 'Spring Boot', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg' },
+              { name: 'Django', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg' },
+              { name: 'React', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
+              { name: 'Flutter', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg' },
+              { name: 'Android', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg' },
+              { name: 'iOS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg' },
+              { name: 'Tailwind', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg' },
+              { name: 'AWS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg' },
+              { name: 'Docker', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg' },
+              { name: 'Git', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
+              { name: 'PostgreSQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg' },
+              { name: 'MongoDB', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' },
+              { name: 'Redis', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg' },
+              { name: 'Firebase', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg' },
+              { name: 'Figma', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg' },
+              { name: 'GitHub', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg' },
             ].map((skill, i) => (
               <div key={i} className="group">
-                <div className="p-6 border border-gray-200 hover:border-gray-900 transition-colors bg-white">
-                  <div className="text-lg font-medium">{skill}</div>
+                <div className="flex flex-col items-center gap-2 p-3 border border-gray-200 hover:border-gray-900 hover:shadow-md transition-all bg-white">
+                  <img 
+                    src={skill.icon} 
+                    alt={skill.name}
+                    className="w-8 h-8 object-contain"
+                  />
+                  <div className="text-xs font-medium text-center">{skill.name}</div>
                 </div>
               </div>
             ))}
