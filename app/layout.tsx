@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter, Fira_Code } from 'next/font/google'
 import './globals.css'
 import { LanguageProvider } from './lib/LanguageContext'
+import FirebaseAnalytics from './components/FirebaseAnalytics'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -27,8 +28,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${firaCode.variable}`}>
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
+        <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+      </head>
       <body className={inter.className}>
         <LanguageProvider>
+          <FirebaseAnalytics />
           {children}
         </LanguageProvider>
       </body>
