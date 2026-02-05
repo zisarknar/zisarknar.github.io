@@ -3,14 +3,15 @@
 import { initializeApp, getApps, getApp } from 'firebase/app'
 import { getAnalytics, Analytics } from 'firebase/analytics'
 
+// here is commit
 const firebaseConfig = {
-  apiKey: "AIzaSyA2iyI8op3Ii0lrgRPW2MyohHF59Pkiai8",
-  authDomain: "zisarkar.firebaseapp.com",
-  projectId: "zisarkar",
-  storageBucket: "zisarkar.firebasestorage.app",
-  messagingSenderId: "27294801630",
-  appId: "1:27294801630:web:9b1c82016dfc10b2c5ec4f",
-  measurementId: "G-WLGSKHXGSM"
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
 }
 
 // Initialize Firebase
