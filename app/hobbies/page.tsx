@@ -213,6 +213,46 @@ export default function Hobbies() {
         </div>
       </section>
 
+      {/* Cooking Section */}
+      <section className="relative py-24 px-6 md:px-12 lg:px-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+            {/* Image */}
+            <div className="relative">
+              <div className="aspect-[4/3] bg-gray-200 overflow-hidden">
+                <img
+                  src="/assets/hobbies/cooking.jpg"
+                  alt="Cooking"
+                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+              {/* Decorative elements */}
+              <div className="absolute -bottom-6 -right-6 w-32 h-32 border-b-2 border-r-2 border-gray-200"></div>
+            </div>
+
+            {/* Content */}
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <div className="text-sm text-gray-500 tracking-wider">03 / LIFESTYLE</div>
+                <h2 className="text-5xl md:text-6xl font-bold tracking-tight">COOKING</h2>
+                <div className="w-20 h-1 bg-gray-900"></div>
+              </div>
+
+              <div className="space-y-6 text-base text-gray-700 leading-relaxed">
+                <p>
+                  Cooking has become my creative outlet outside of coding. Living in Japan has exposed me to incredible
+                  culinary traditions, and I enjoy experimenting with both traditional Burmese dishes from my heritage
+                  and Japanese home cooking.
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+
       <Footer />
       </main>
     </PageTransition>
