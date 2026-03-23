@@ -33,17 +33,7 @@ export default function TopNav() {
           >
             HOME
           </Link>
-          <Link 
-            href="/about" 
-            className={`text-xs tracking-wider transition-colors ${
-              pathname === '/about' 
-                ? 'text-gray-900 font-semibold' 
-                : 'text-gray-500 hover:text-gray-900'
-            }`}
-          >
-            ABOUT
-          </Link>
-          <Link 
+             <Link 
             href="/hobbies" 
             className={`text-xs tracking-wider transition-colors ${
               pathname === '/hobbies' 
@@ -53,6 +43,17 @@ export default function TopNav() {
           >
             HOBBIES
           </Link>
+          <Link 
+            href="/contact" 
+            className={`text-xs tracking-wider transition-colors ${
+              pathname === '/contact' 
+                ? 'text-gray-900 font-semibold' 
+                : 'text-gray-500 hover:text-gray-900'
+            }`}
+          >
+            CONTACT
+          </Link>
+       
         </div>
       </div>
     </nav>
