@@ -106,7 +106,6 @@ export default function Error({ error, reset }: ErrorProps) {
         <div className="absolute bottom-8 left-0 right-0 px-6 md:px-12 lg:px-24">
           <div className="max-w-7xl mx-auto flex justify-center gap-12 text-xs text-gray-500">
             <Link href="/" className="hover:text-gray-900 transition-colors tracking-wider">HOME</Link>
-            <Link href="/about" className="hover:text-gray-900 transition-colors tracking-wider">ABOUT</Link>
           </div>
         </div>
       </section>

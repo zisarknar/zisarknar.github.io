@@ -21,10 +21,10 @@ export default function Home() {
             {/* Left Content */}
             <div className="space-y-8">
               {/* Available Badge */}
-              <div className="flex items-center gap-2">
+              {/* <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-green-500"></div>
                 <span className="text-sm text-gray-600">Available for work</span>
-              </div>
+              </div> */}
 
               {/* Name */}
               <div className="space-y-2">
@@ -50,10 +50,10 @@ export default function Home() {
               {/* CTA Button */}
               <div className="pt-4">
                 <Link 
-                  href="/about"
+                  href="/contact"
                   className="inline-block px-8 py-4 bg-gray-900 text-white hover:bg-gray-800 transition-colors text-sm font-medium tracking-wider"
                 >
-                  HIRE ME
+                  CONTACT
                 </Link>
               </div>
             </div>
