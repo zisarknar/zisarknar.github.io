@@ -33,17 +33,27 @@ export default function TopNav() {
           >
             HOME
           </Link>
-             <Link 
-            href="/hobbies" 
+             <Link
+            href="/hobbies"
             className={`text-xs tracking-wider transition-colors ${
-              pathname === '/hobbies' 
-                ? 'text-gray-900 font-semibold' 
+              pathname === '/hobbies'
+                ? 'text-gray-900 font-semibold'
                 : 'text-gray-500 hover:text-gray-900'
             }`}
           >
             HOBBIES
           </Link>
-          <Link 
+          <Link
+            href="/blog"
+            className={`text-xs tracking-wider transition-colors ${
+              pathname.startsWith('/blog')
+                ? 'text-gray-900 font-semibold'
+                : 'text-gray-500 hover:text-gray-900'
+            }`}
+          >
+            BLOG
+          </Link>
+          <Link
             href="/contact" 
             className={`text-xs tracking-wider transition-colors ${
               pathname === '/contact' 
