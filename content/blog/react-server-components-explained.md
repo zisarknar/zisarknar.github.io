@@ -3,6 +3,7 @@ title: "React Server Components, Explained"
 date: "2024-05-18"
 excerpt: "Cutting through the confusion around Server Components — what actually changes, and what mental model finally made it click for me."
 tags: ["React", "Next.js", "Frontend"]
+status: "published"
 ---
 
 I resisted React Server Components for longer than I should have, mostly because every explanation I read started with implementation details instead of the actual problem they solve.

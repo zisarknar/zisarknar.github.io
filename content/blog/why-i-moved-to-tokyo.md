@@ -3,6 +3,7 @@ title: "Why I Moved to Tokyo"
 date: "2024-03-10"
 excerpt: "Leaving Myanmar to build a career in Japan's tech industry — what I expected, what surprised me, and what I'd tell my younger self."
 tags: ["Career", "Personal", "Japan"]
+status: "published"
 ---
 
 People ask me why a software engineer from Myanmar ends up writing code in Tokyo. The short answer is opportunity. The longer answer is more interesting.

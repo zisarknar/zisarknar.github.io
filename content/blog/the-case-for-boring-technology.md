@@ -3,6 +3,7 @@ title: "The Case for Boring Technology"
 date: "2024-10-12"
 excerpt: "Why I default to the well-worn tool over the exciting new framework, and the one exception that's actually worth the risk."
 tags: ["Engineering", "Architecture", "Opinion"]
+status: "published"
 ---
 
 Every few months a new framework promises to make everything faster, simpler, or more elegant. Most of the time, I let other people find out the hard way whether that's true.

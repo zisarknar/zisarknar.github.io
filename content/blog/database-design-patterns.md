@@ -3,6 +3,7 @@ title: "Database Design Patterns I Actually Use"
 date: "2024-06-22"
 excerpt: "Forget the textbook normal forms for a second — here are the database decisions that actually mattered in production systems I've built."
 tags: ["Database", "Backend", "System Design"]
+status: "published"
 ---
 
 Most database advice online is either academic normalization theory or a hot take about how a particular ORM ruined someone's week. Here's what's actually mattered in systems I've shipped.
