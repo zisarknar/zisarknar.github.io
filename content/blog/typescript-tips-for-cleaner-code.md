@@ -3,6 +3,7 @@ title: "TypeScript Tips for Cleaner Code"
 date: "2024-04-05"
 excerpt: "A handful of TypeScript patterns I reach for constantly — discriminated unions, branded types, and saying no to 'any'."
 tags: ["TypeScript", "Best Practices"]
+status: "published"
 ---
 
 TypeScript's type system is powerful enough to replace a surprising amount of runtime validation and defensive code, if you actually use it instead of treating it as JavaScript with extra syntax.

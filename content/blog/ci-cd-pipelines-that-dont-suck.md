@@ -3,6 +3,7 @@ title: "CI/CD Pipelines That Don't Suck"
 date: "2024-07-30"
 excerpt: "Why most CI pipelines are slower and flakier than they need to be, and the handful of changes that fixed it every time."
 tags: ["DevOps", "CI/CD", "Engineering"]
+status: "published"
 ---
 
 I've inherited more broken CI pipelines than I've built from scratch, and the failure pattern is almost always the same: nobody treats the pipeline itself as a piece of software that needs maintenance.

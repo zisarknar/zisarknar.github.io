@@ -3,6 +3,7 @@ title: "From Myanmar to Japan: My Journey"
 date: "2024-08-14"
 excerpt: "Growing up in Myanmar as part of the Lisu people, and how that path led to a career building software in Tokyo."
 tags: ["Personal", "Myanmar", "Career"]
+status: "published"
 ---
 
 My path into software engineering didn't start with a computer. It started with curiosity about how things worked, and a lot of improvisation, growing up as part of the Lisu people in Myanmar.

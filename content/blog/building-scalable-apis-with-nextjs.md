@@ -3,6 +3,7 @@ title: "Building Scalable APIs with Next.js"
 date: "2024-01-15"
 excerpt: "How I structure API routes and server actions in Next.js projects so they stay maintainable as the codebase grows."
 tags: ["Next.js", "API", "Backend"]
+status: "published"
 ---
 
 When I started building APIs with Next.js, I treated every route handler like a one-off script. That worked fine for a weekend project, but it fell apart the moment a real product needed authentication, validation, and shared business logic across a dozen endpoints.

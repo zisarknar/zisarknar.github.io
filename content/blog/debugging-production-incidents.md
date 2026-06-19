@@ -3,6 +3,7 @@ title: "Debugging Production Incidents Without Losing Your Mind"
 date: "2024-09-25"
 excerpt: "A calm process for the moment everything is on fire — how I triage, isolate, and fix production incidents under pressure."
 tags: ["Debugging", "SRE", "Engineering"]
+status: "published"
 ---
 
 The worst debugging happens during the worst possible time — production is down, people are watching, and panic makes everyone worse at their job, including you. Having a process that doesn't depend on staying calm matters more than any specific debugging trick.

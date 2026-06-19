@@ -3,6 +3,7 @@ title: "Lessons from Mobile Development"
 date: "2024-02-20"
 excerpt: "What switching between web and mobile taught me about state management, offline support, and respecting the platform."
 tags: ["Mobile", "React Native", "Engineering"]
+status: "published"
 ---
 
 Moving between web and mobile development forces you to question assumptions you didn't even know you had. On the web, a flaky network connection is an edge case. On mobile, it's Tuesday.

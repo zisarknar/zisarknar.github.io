@@ -52,60 +52,86 @@ export default async function BlogPost({ params }: PageProps) {
         <SocialSidebar />
 
         <article className="relative py-24 px-6 md:px-12 lg:px-24">
-          <div className="max-w-3xl mx-auto w-full">
+          <div className="max-w-7xl mx-auto w-full">
             <div className="mb-12">
               <Breadcrumb currentPage="Blog" />
             </div>
 
-            <header className="mb-12 space-y-6">
-              <div className="flex gap-2">
-                {post.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="text-xs text-gray-500 tracking-wider px-2 py-1 border border-gray-200"
+            <div className="grid grid-cols-1 lg:grid-cols-[1fr_260px] gap-16">
+              <div className="max-w-3xl">
+                <header className="mb-12 space-y-6">
+                  <div className="flex gap-2">
+                    {post.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="text-xs text-gray-500 tracking-wider px-2 py-1 border border-gray-200"
+                      >
+                        {tag.toUpperCase()}
+                      </span>
+                    ))}
+                  </div>
+                  <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-gray-900">
+                    {post.title}
+                  </h1>
+                  <div className="w-20 h-1 bg-gray-900"></div>
+                  <p className="text-sm text-gray-500">{formatDate(post.date)}</p>
+                </header>
+
+                <div
+                  className="prose prose-lg max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-4 prose-p:text-gray-700 prose-p:leading-relaxed prose-a:text-blue-600 prose-strong:text-gray-900 prose-code:text-sm prose-pre:bg-gray-900"
+                  dangerouslySetInnerHTML={{ __html: post.contentHtml }}
+                />
+
+                <div className="mt-24 pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between gap-6">
+                  {prevPost ? (
+                    <Link href={`/blog/${prevPost.slug}`} className="group max-w-xs">
+                      <div className="text-xs text-gray-400 tracking-wider mb-1">PREVIOUS</div>
+                      <div className="text-base font-medium text-gray-900 group-hover:text-gray-500 transition-colors">
+                        {prevPost.title}
+                      </div>
+                    </Link>
+                  ) : <div />}
+                  {nextPost ? (
+                    <Link href={`/blog/${nextPost.slug}`} className="group max-w-xs text-right">
+                      <div className="text-xs text-gray-400 tracking-wider mb-1">NEXT</div>
+                      <div className="text-base font-medium text-gray-900 group-hover:text-gray-500 transition-colors">
+                        {nextPost.title}
+                      </div>
+                    </Link>
+                  ) : <div />}
+                </div>
+
+                <div className="mt-12">
+                  <Link
+                    href="/blog"
+                    className="inline-block px-8 py-4 bg-gray-900 text-white hover:bg-gray-800 transition-colors text-sm font-medium tracking-wider"
                   >
-                    {tag.toUpperCase()}
-                  </span>
-                ))}
+                    BACK TO BLOG
+                  </Link>
+                </div>
               </div>
-              <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-gray-900">
-                {post.title}
-              </h1>
-              <div className="w-20 h-1 bg-gray-900"></div>
-              <p className="text-sm text-gray-500">{formatDate(post.date)}</p>
-            </header>
 
-            <div
-              className="prose prose-lg max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-4 prose-p:text-gray-700 prose-p:leading-relaxed prose-a:text-blue-600 prose-strong:text-gray-900 prose-code:text-sm prose-pre:bg-gray-900"
-              dangerouslySetInnerHTML={{ __html: post.contentHtml }}
-            />
-
-            <div className="mt-24 pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between gap-6">
-              {prevPost ? (
-                <Link href={`/blog/${prevPost.slug}`} className="group max-w-xs">
-                  <div className="text-xs text-gray-400 tracking-wider mb-1">PREVIOUS</div>
-                  <div className="text-base font-medium text-gray-900 group-hover:text-gray-500 transition-colors">
-                    {prevPost.title}
+              {/* Floating table of contents */}
+              {post.headings.length > 0 && (
+                <aside className="hidden lg:block">
+                  <div className="sticky top-32 space-y-4">
+                    <div className="text-xs text-gray-400 tracking-wider">ON THIS PAGE</div>
+                    <nav className="space-y-2 border-l border-gray-200">
+                      {post.headings.map((heading) => (
+                        <a
+                          key={heading.slug}
+                          href={`#${heading.slug}`}
+                          className={`block text-sm text-gray-500 hover:text-gray-900 transition-colors leading-snug ${
+                            heading.depth === 3 ? 'pl-8' : 'pl-4'
+                          }`}
+                        >
+                          {heading.text}
+                        </a>
+                      ))}
+                    </nav>
                   </div>
-                </Link>
-              ) : <div />}
-              {nextPost ? (
-                <Link href={`/blog/${nextPost.slug}`} className="group max-w-xs text-right">
-                  <div className="text-xs text-gray-400 tracking-wider mb-1">NEXT</div>
-                  <div className="text-base font-medium text-gray-900 group-hover:text-gray-500 transition-colors">
-                    {nextPost.title}
-                  </div>
-                </Link>
-              ) : <div />}
-            </div>
-
-            <div className="mt-12">
-              <Link
-                href="/blog"
-                className="inline-block px-8 py-4 bg-gray-900 text-white hover:bg-gray-800 transition-colors text-sm font-medium tracking-wider"
-              >
-                BACK TO BLOG
-              </Link>
+                </aside>
+              )}
             </div>
           </div>
         </article>
